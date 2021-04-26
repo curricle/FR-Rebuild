@@ -1,10 +1,66 @@
 import React from 'react';
 import './fr.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    useRouteMatch,
+    useParams
+  } from "react-router-dom";
+  
+
+class NavTab extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showMenu: false,
+        }
+    }
+
+    render() {
+        return(
+            <div>
+            <div className="nav-header" id="clan-header" onClick={openNavTab}><img className="nav-icon" src="https://cdn.discordapp.com/attachments/454300354457239553/645122839065788416/clan_icon.png" /><span className="nav-title">Clan</span>
+                </div>
+                <ul className="nav-list" id="clan-list">
+                    <li><a className="nav-link" href="#">Dragon Lair</a></li>
+                    <li><a className="nav-link" href="#">Nesting Grounds</a></li>
+                    <li><a className="nav-link" href="#">Gather Items</a></li>
+                    <li><a className="nav-link" href="#">Clan Profile</a></li>
+                    <li><a className="nav-link" href="#">Hoard</a></li>
+                    <li><a className="nav-link" href="#">Bestiary</a></li>
+                    <li><a className="nav-link" href="#">Messages</a></li>
+                </ul>
+                </div>
+        );
+    }
+
+}
+ 
+//This will eventually be for the mobile navigation tab content toggling
+function openNavTab() {
+    console.log("OpenNavTab running");
+    console.log();
+  // document.getElementById(tab);
+   //console.log(tab);
+   //var categoryListName = tab.id.replace("header", "list"); //subtract "header" from string & replace it with "list"
+   //console.log(categoryListName);
+   //document.getElementById(categoryListName).style.display = "block";
+}
+
+function closeAll() {
+    document.getElementById('clan-list').style.display = 'none';
+    document.getElementById('shop-list').style.display = 'none';
+    document.getElementById('play-list').style.display = 'none';
+    document.getElementById('library-list').style.display = 'none';
+}
 
 function Navigation() {
     return(
         <div className="navigation">
-                <div className="nav-header" id="clan-header"><img className="nav-icon" src="https://cdn.discordapp.com/attachments/454300354457239553/645122839065788416/clan_icon.png" /><span className="nav-title">Clan</span>
+                <div className="nav-header" id="clan-header" onClick={openNavTab}><img className="nav-icon" src="https://cdn.discordapp.com/attachments/454300354457239553/645122839065788416/clan_icon.png" /><span className="nav-title">Clan</span>
                 </div>
                 <ul className="nav-list" id="clan-list">
                     <li><a className="nav-link" href="#">Dragon Lair</a></li>

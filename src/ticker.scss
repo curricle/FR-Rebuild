@@ -1,0 +1,48 @@
+.ticker {
+    height: 25px;
+    border-radius: 0 0 7px 7px;
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+    background: #DDD7C9;
+    width: 285px;
+    font-size: 10px;
+    grid-column-start: 3;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+}
+
+#ticker-icon {
+    margin: 5px;  
+    height: 15px;
+    width: 15px;
+}
+
+#ticker-info {
+    margin: 2px;
+}
+
+.ticker-item-visible {
+    display: block;
+    animation-name: ticker-rotation;
+    animation-direction: reverse;
+    animation-duration: 1s;
+}
+
+.ticker-item-hidden {
+    display: none;
+}
+
+@keyframes ticker-rotation {
+
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

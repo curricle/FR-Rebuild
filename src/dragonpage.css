@@ -1,0 +1,68 @@
+.dragon-title {
+    display: flex;
+    height: 32px;
+}
+
+.dragon-title h1 {
+    color: #731d08;
+}
+
+#dragon {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    max-width: 350px;
+    max-height: 350px;
+    margin: 0 auto;
+}
+
+.dragon-nav {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(rgb(165, 47, 20),#731C08);
+    color: #DBD6C8;
+    text-decoration: none;
+    text-align: center;
+    font-size: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    border: 2px solid #DBD6C8;
+    box-shadow: 0px 3px rgba(0,0,0,.7);
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.dragon-nav:hover {
+    opacity: 1;
+}
+
+#dragon-image {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+}
+
+#dragon-image img {
+    width: 100%;
+}
+
+#last-dragon {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    z-index: 1;
+}
+
+#next-dragon {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    z-index: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .dragon-nav {
+        opacity: 1;
+    }
+    #last-dragon, #next-dragon {
+        grid-row: 3 / 4;
+    }
+
+}

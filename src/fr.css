@@ -123,8 +123,7 @@ header {
 }
 
 .user-bar-icon img {
-    width: 25px;
-    height: 25px;
+    margin-right: 5px;
 }
 
 .user-bar-icon a {
@@ -312,6 +311,11 @@ footer {
 
     .nav-title {
         display: none;
+    }
+
+    .nav-tab-opened {
+        background: #DBD6C8;
+        display: block;
     }
 
     .skybanner {
